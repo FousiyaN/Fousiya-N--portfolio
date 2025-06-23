@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GrowWise Login</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Firebase and UI scripts as ES modules -->
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="logo.jpg" height="150" alt="GrowWise logo" />
+        <h2>GrowWise Private Tutoring</h2>
+      </a>
+
+      <span class="menu-btn material-symbols-rounded">menu</span>
+
+      <ul class="links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="tutors.html">Tutors</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="help.html">Help</a></li>
+        <span class="close-btn material-symbols-rounded">close</span>
+      </ul>
+
+      <button class="login-btn">Log In</button>
+      <button class="logout-btn" style="display: none;">Log Out</button>
+    </nav>
+  </header>
+
+  <section class="intro-course">
+    <h1>Welcome to GrowWise Private Tutoring</h1>
+    <p>
+      GrowWise is an online tutoring community that started with a single teacher and now has tutors and students worldwide.
+    </p>
+  </section>
+
+  <div class="blur-bg-overlay"></div>
+
+  <div class="form-popup">
+    <span class="close-btn material-symbols-rounded">close</span>
+
+    <div class="form-box login">
+      <div class="form-details">
+        <h2>Welcome to GrowWise Tutoring</h2>
+        <p>Please login to see your academic progress</p>
+      </div>
+      <div class="form-content">
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="input-field">
+            <input type="email" id="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="password" required />
+            <label>Password</label>
+          </div>
+          <a href="#" class="forgot-password">Forgot password?</a>
+          <button type="submit" id="submit">Log in</button>
+        </form>
+        <div class="bottom-link">
+          Don't have an account? <a href="#" id="signup-link">Signup</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-box signup">
+      <div class="form-details">
+        <h2>Create Account</h2>
+        <p>To join and take admissions, please signup to our GrowWise community</p>
+      </div>
+      <div class="form-content">
+        <h2>Signup</h2>
+        <form id="signup-form">
+          <div class="input-field">
+            <input type="email" required />
+            <label>Enter your Email</label>
+          </div>
+          <div class="input-field">
+            <input type="password" required />
+            <label>Create new password</label>
+          </div>
+          <div class="policy-text">
+            <input type="checkbox" id="policy" required />
+            <label for="policy">
+              I agree to the <a href="#">Terms and Conditions</a>
+            </label>
+          </div>
+          <button type="submit">Sign up</button>
+        </form>
+        <div class="bottom-link">
+          Already have an account? <a href="#" id="login-link">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
